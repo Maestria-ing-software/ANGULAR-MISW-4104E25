@@ -8,11 +8,11 @@ import { environment } from 'src/enviroments/inviroment';
   providedIn: 'root'
 })
 export class CoffeeService {
-private apiUrl: string = environment.baseUrl + 'coffes'
+private apiUrl: string = environment.baseUrl
 
 constructor(private http: HttpClient) { }
 
-getCoffies(): Observable<Coffee[]>{
+getCoffees(): Observable<Coffee[]>{
   return this.http.get<Coffee[]>(this.apiUrl);
 }
 
